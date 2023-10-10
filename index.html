@@ -47,7 +47,10 @@
 		btnAddElem.addEventListener('click', (e) => {
 			e.preventDefault();
 			const shoppingItem = shoppingItemElem.value;
-			shoppingListElem.style.display = 'none';
+			const liElem = document.createElement('li');
+			liElem.innerText = shoppingItem;
+			shoppingListElem.appendChild(liElem);
+			shoppingItemElem.value = '';
 		});
 	</script>
 </body>
