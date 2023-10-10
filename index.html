@@ -26,7 +26,7 @@
 
 <body>
 	<h1>Shopping List</h1>
-	<ul>
+	<ul class="shoppingList">
 		<li>butter</li>
 		<li>bread</li>
 		<li>milk</li>
@@ -36,16 +36,18 @@
 	</ul>
 
 	<form>
-		<input class="shoppingItemInput" type="text"> <button class="btnAdd">Add</button>
+		<input class="shoppingItemInput" type="text" > <button class="btnAdd">Add</button>
 	</form>
 
 	<script>
 		const btnAddElem = document.querySelector('.btnAdd');
 		const shoppingItemElem = document.querySelector('.shoppingItemInput');
+		const shoppingListElem = document.querySelector('.shoppingList');
 
-		btnAddElem.addEventListener('click', () => {
+		btnAddElem.addEventListener('click', (e) => {
+			e.preventDefault();
 			const shoppingItem = shoppingItemElem.value;
-			alert('adding ' + shoppingItem)
+			shoppingListElem.style.display = 'none';
 		});
 	</script>
 </body>
