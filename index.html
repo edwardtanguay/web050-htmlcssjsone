@@ -36,11 +36,17 @@
 	</ul>
 
 	<form>
-		<input type="text"> <button>Add</button>
+		<input class="shoppingItemInput" type="text"> <button class="btnAdd">Add</button>
 	</form>
 
 	<script>
-		
+		const btnAddElem = document.querySelector('.btnAdd');
+		const shoppingItemElem = document.querySelector('.shoppingItemInput');
+
+		btnAddElem.addEventListener('click', () => {
+			const shoppingItem = shoppingItemElem.value;
+			alert('adding ' + shoppingItem)
+		});
 	</script>
 </body>
 
